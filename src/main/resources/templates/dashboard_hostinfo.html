@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HostStats.xyz - Host Info</title>
+    <div th:replace="fragments/header_dashboard :: header-css"/>
+</head>
+<body class="hold-transition skin-blue layout-top-nav">
+
+<div th:replace="fragments/header_dashboard :: header"/>
+
+
+<div class="content-wrapper">
+    <div class="container">
+        <center><span th:text="${info}" style="color: red"></span></center>
+        <h1>Host info: <span th:text="${hostTitle}"></span></h1>
+        <div class="container">
+
+
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Information about your host</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Title</th>
+                            <th>OS name</th>
+                            <th>Memory</th>
+                            <th>Disk</th>
+                            <th>Cpu</th>
+                            <th>Update time</th>
+                            <th>IP</th>
+                            <th>Uptime</th>
+
+                        </tr>
+                        <tr th:each="host: ${hostInfo}">
+                            <td th:text="${host.hostTitle}"></td>
+                            <td th:text="${host.hostOs}"></td>
+                            <td th:text="${host.hostMemory}"></td>
+                            <td th:text="${host.hostDisk}"></td>
+                            <td th:text="${host.hostCpu}"></td>
+                            <td th:text="${host.hostUpdate}"></td>
+                            <td th:text="${host.hostIp}"></td>
+                            <td th:text="${host.hostUptime}"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer_dashboard :: footer"/>
+
+</body>
+</html>

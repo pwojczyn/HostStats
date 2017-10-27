@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HostStats.xyz - Account</title>
+    <div th:replace="fragments/header_dashboard :: header-css"/>
+</head>
+<body class="hold-transition skin-blue layout-top-nav">
+
+<div th:replace="fragments/header_dashboard :: header"/>
+
+
+<div class="content-wrapper">
+    <div class="container">
+        <center><span th:text="${info}" style="color: red"></span></center>
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Account</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <h4>Your e-mail</h4>
+                <p class="bg-info"><span th:text="${userEmail}"></span></p>
+                <h4>Your api key</h4>
+                <p class="bg-info"> <span th:text="${userApiKey}"></span></p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer_dashboard :: footer"/>
+
+</body>
+</html>
