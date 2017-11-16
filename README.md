@@ -2,4 +2,5 @@
 HostStats.xyz - Online host monitoring http://hoststas.xyz
 
 ![alt text](https://raw.githubusercontent.com/pwojczyn/HostStats/branch/master/hoststats_xyz.jpg)
+![Screenshot](hoststats_xyz.jpg)
 
